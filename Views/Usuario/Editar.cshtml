@@ -1,0 +1,29 @@
+@using Projeto.Carfel.Comentarios.Models;
+@{
+    Layout= "MasterPageUsuario";
+}
+<html>
+
+    @{
+        UsuarioModel usuario = ViewBag.Usuario;   
+    }
+
+    @ViewBag.Mensagem
+
+    <form action="MasterPage.cshtml" method="POST">
+        <input type="hidden" value="@usuario.ID" name="id">
+        <label>
+            Nome
+            <input type="text" value="@usuario.Nome" name="nome">
+        </label>
+        <label>
+            E-mail
+            <input type="email" value="@usuario.Email" name="email">
+        </label>
+        <label>
+            Senha
+            <input type="password" value="@usuario.Senha" name="senha">
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+</html>
