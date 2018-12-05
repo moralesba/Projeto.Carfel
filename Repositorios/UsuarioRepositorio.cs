@@ -4,7 +4,7 @@ using Projeto.Carfel.Comentarios.Interfaces;
 using Projeto.Carfel.Comentarios.Models;
 
 namespace Projeto.Carfel.Comentarios.Repositorios {
-    public class UsuarioReporitorioCSV : IUsuario {
+    public class UsuarioRepositorio : IUsuario {
         public UsuarioModel BuscarPorEmailESenha (string email, string senha) {
             List<UsuarioModel> usuariosCadastrados = CarregarDoCSV ();
 

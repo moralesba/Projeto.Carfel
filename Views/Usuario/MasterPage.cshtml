@@ -50,9 +50,10 @@
                 </ul>
             </div>
         </nav>
-        <form action="/Usuario/Login" method="POST">
-            <div id="modal-login" data-iziModal-fullscreen="true" data-iziModal-title="Login" data-iziModal-subtitle="Carfel"
-                data-iziModal-icon="icon-home">
+
+        <div id="modal-login" data-iziModal-fullscreen="true" data-iziModal-title="Login" data-iziModal-subtitle="Carfel"
+            data-iziModal-icon="icon-home">
+            <form action="/Usuario/Login" method="POST">
                 <div class="campos-login">
                     <input type="email" name="email" required maxlength="80" placeholder="Email">
                     <input type="password" name="senha" required maxlength="50" placeholder="Senha">
@@ -62,7 +63,6 @@
                                 data-izimodal-transitionin="fadeInDown" data-izimodal-close="#modal">Cadastre-se aqui</a></p>
                     </div>
                 </div>
-                
                 <div class="bt-login">
                     <div class="bt1" data-izimodal-close="">
                         <button>cancelar</button>
@@ -71,24 +71,33 @@
                         <button type="submit">entrar</button>
                     </div>
                 </div>
-           </div>
-        </form>
-        <form action="MasterPage" method="POST">
-            <div id="modal-cadastro" data-iziModal-fullscreen="true" data-iziModal-title="Cadastro"
-                data-iziModal-subtitle="Carfel" data-iziModal-icon="icon-home">
+            </form>
+        </div>
+
+
+        <div id="modal-cadastro" data-iziModal-fullscreen="true" data-iziModal-title="Cadastro" data-iziModal-subtitle="Carfel"
+            data-iziModal-icon="icon-home">
+            <form action="/Usuario/Cadastro" method="POST">
                 <div class="campos-cadastro">
-                    <input type="text" name="nome" placeholder="Nome">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="text" name="nome" placeholder="nome">
+                    <input type="email" name="email" placeholder="email">
+                    <input type="password" name="senha" placeholder="senha">
                 </div>
                 <div class="bt-cadastro">
-                    <button class="bt3" data-izimodal-transitionin="fadeInDown" data-izimodal-close="">cancelar</button>
+                    <button class="bt3" data-izimodal-close="">cancelar</button>
                     <button class="bt4" type="submit">cadastrar</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </header>
     <main>
+        @if (TempData["UsuarioLogado"] != null){
+        <div class="usuario">
+            <i class="fas fa-user"></i>
+            <p>@TempData["UsuarioLogado"]</p>
+        </div>
+        }
         <div class="container">
             <div class="banner">
                 <img src="imagens/banner.png" alt="banner">
@@ -337,6 +346,7 @@
             }
         }
     </script>
+
 </body>
 
 <!-- <div id="container5">
