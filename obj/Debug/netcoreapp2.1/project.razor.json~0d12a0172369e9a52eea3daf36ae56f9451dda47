@@ -2,13 +2,5 @@
   "ProjectFilePath": "c:\\Users\\47015374897\\Desktop\\htm & css\\Carfel\\Projeto.Carfel.Comentarios\\Projeto.Carfel.Comentarios.csproj",
   "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "MVC-2.1",
-    "LanguageVersion": "2.1",
-    "Extensions": [
-      {
-        "ExtensionName": "MVC-2.1"
-      }
-    ]
-  }
+  "Configuration": null
 }
