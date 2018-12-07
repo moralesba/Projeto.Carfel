@@ -11,11 +11,6 @@ C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Deb
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.TagHelpers.input.cache
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.TagHelpers.output.cache
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.RazorCoreGenerate.cache
-C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\MasterPageAtualizado.g.cshtml.cs
-C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastro.g.cshtml.cs
-C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Editar.g.cshtml.cs
-C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Listar.g.cshtml.cs
-C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Login.g.cshtml.cs
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\MasterPage.g.cshtml.cs
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.RazorTargetAssemblyInfo.cache
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.RazorTargetAssemblyInfo.cs
@@ -51,3 +46,6 @@ C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\
 C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Projeto.Carfel.Comentarios.csproj.CopyComplete
 C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Cadastro.g.cshtml.cs
 C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Login.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Cadastro.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Login.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Comentario.g.cshtml.cs

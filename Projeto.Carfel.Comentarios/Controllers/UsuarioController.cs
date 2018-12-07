@@ -1,11 +1,10 @@
-using System.IO;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto.Carfel.Comentarios.Models;
 using Projeto.Carfel.Comentarios.Repositorios;
 
-namespace Projeto.Carfel.Comentarios.Controllers {
+namespace Projeto.Carfel.Comentarios.Controllers
+{
     public class UsuarioController : Controller{
         
         [HttpGet]

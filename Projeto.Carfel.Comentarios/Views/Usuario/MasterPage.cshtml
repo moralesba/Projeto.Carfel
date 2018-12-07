@@ -1,3 +1,5 @@
+@using Microsoft.AspNetCore.Http
+
 <!DOCTYPE html>
 <html>
 
@@ -44,55 +46,30 @@
                     <li>
                         <a href="contato.html" class="menu-itens">contato</a>
                     </li>
+                    <li>
+                        @if(@Context.Session.GetString("nomeUsuario") != null){
+                            <a href="#" class="menu-itens">
+                            <i class="fas fa-user"></i>
+                            @Context.Session.GetString("nomeUsuario")</a>
+                    }
+                    </li>
                     <li class="bt-login-ul">
                         <button class="login" data-izimodal-open="#modal-login" data-izimodal-transitionin="fadeInDown">Login</button>
                     </li>
                 </ul>
             </div>
         </nav>
-        <form action="/Usuario/Login" method="POST">
-            <div id="modal-login" data-iziModal-fullscreen="true" data-iziModal-title="Login" data-iziModal-subtitle="Carfel"
-                data-iziModal-icon="icon-home">
-                <div class="campos-login">
-                    <input type="email" name="email" required maxlength="80" placeholder="Email">
-                    <input type="password" name="senha" required maxlength="50" placeholder="Senha">
 
-                    <div class="conta">
-                        <p>Não possui uma conta? <a href="#" data-izimodal-open="#modal-cadastro"
-                                data-izimodal-transitionin="fadeInDown" data-izimodal-close="#modal">Cadastre-se aqui</a></p>
-                    </div>
-                </div>
-                
-                <div class="bt-login">
-                    <div class="bt1" data-izimodal-close="">
-                        <button>cancelar</button>
-                    </div>
-                    <div class="bt2">
-                        <button type="submit">entrar</button>
-                    </div>
-                </div>
-           </div>
-        </form>
-        <form action="Usuario/MasterPage" method="POST">
-            <div id="modal-cadastro" data-iziModal-fullscreen="true" data-iziModal-title="Cadastro"
-                data-iziModal-subtitle="Carfel" data-iziModal-icon="icon-home">
-                <div class="campos-cadastro">
-                    <input type="text" name="nome" placeholder="Nome">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <div class="bt-cadastro">
-                    <button class="bt3" data-izimodal-transitionin="fadeInDown" data-izimodal-close="">cancelar</button>
-                    <button class="bt4" type="submit">cadastrar</button>
-                </div>
-            </div>
-        </form>
+
+        @Html.Partial("Login")
+        @Html.Partial("Cadastro")
+
+
     </header>
     <main>
+        
         <div class="container">
-            <div class="banner">
-                <img src="imagens/banner.png" alt="banner">
-            </div>
+
             <div class="name">
                 <h1>Carfel</h1>
                 <br>
@@ -101,8 +78,10 @@
                 <span class="slogan1">Tornando Sua Empresa Melhor</span>
                 <br>
                 <br>
-                <span class="slogan2">Lorem ipsum, dolores sit amet
-                    <br>consectetur adipisicing ena elit.</span>
+                <span class="slogan2">Lorem ipsum, dolores sit amet <br> consectetur adipisicing ena elit.</span>
+            </div>
+            <div class="banner">
+                <img src="imagens/banner.png" alt="banner">
             </div>
             <div class="inicie link1">
                 <a href="#" data-izimodal-open="#modal-cadastro" data-izimodal-transitionin="fadeInDown">inicie
@@ -113,7 +92,9 @@
             <div class="bola-amarela"></div>
             <div class="bola-azul"></div>
             <hr>
-            <span class="frase">that's right</span>
+            <div class="frase">
+                <span>that's right</span>
+            </div>
         </div>
         <div class="container2">
             <div class="nosso-produto">
@@ -226,25 +207,8 @@
             <hr>
         </div>
 
-        <div class="container6">
-            <div class="dados1">
-
-            </div>
-            <div class="box-comentario">
-                <h2>Comentários</h2>
-                <textarea id="areaComentario" name="Comentario" placeholder="Escreva seu comentário aqui"></textarea>
-                <div class="
-                    botao">
-                    <button class="botao1" type="submit">
-                        Comentar
-                    </button>
-                    <button>
-                        Cancelar
-                    </button>
-
-                </div>
-            </div>
-        </div>
+     @Html.Partial("Comentario")
+     
     </main>
 
     <footer>
@@ -337,6 +301,7 @@
             }
         }
     </script>
+
 </body>
 
 <!-- <div id="container5">
