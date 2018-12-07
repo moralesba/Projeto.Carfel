@@ -1,0 +1,14 @@
+@{
+    Layout= "MasterPageUsuario";
+}
+
+<html>
+    @ViewBag.Mensagem
+
+    <form action="/Usuario/MasterPage" method="POST">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="senha" placeholder="Senha">
+        <button class="bt4" type="submit">cadastrar</button>
+    </form>
+</html>

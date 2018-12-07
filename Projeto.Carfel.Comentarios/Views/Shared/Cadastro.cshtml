@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="iziModal-master/css/iziModal.min.css">
+<link rel="stylesheet" href="css/Comentario.css">
+<link rel="stylesheet" href="css/MasterPage.css">
+<script src="iziModal-master/js/jquery.min.js"></script>
+<script src="iziModal-master/js/iziModal.min.js"></script>
+
+<div id="modal-cadastro" data-iziModal-fullscreen="true" data-iziModal-title="Cadastro" data-iziModal-subtitle="Carfel"
+    data-iziModal-icon="icon-home">
+    <form action="/Usuario/Cadastro" method="POST">
+        <div class="campos-cadastro">
+            <input type="text" name="nome" placeholder="nome">
+            <input type="email" name="email" placeholder="email">
+            <input type="password" name="senha" placeholder="senha">
+        </div>
+        <div class="bt-cadastro">
+            <button class="bt3" data-izimodal-close="">cancelar</button>
+            <button class="bt4" type="submit">cadastrar</button>
+        </div>
+    </form>
+    <div>
+        @TempData["MensagemCadastro"]
+    </div>
+</div>
