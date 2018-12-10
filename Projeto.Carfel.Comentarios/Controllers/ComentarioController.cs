@@ -9,12 +9,15 @@ namespace Projeto.Carfel.Comentarios.Controllers
         public class ComentarioController : Controller {
 
         [HttpGet] 
-        public IActionResult Cadastro() {
-            return PartialView();
+        public ActionResult MasterPage (){
+            return View ();
+        }
+        public IActionResult CadastroComentario() {
+            return RedirectToAction("MasterPage");
         }
 
         [HttpPost]
-        public IActionResult Cadastro(IFormCollection form) {
+        public IActionResult CadastroComentario(IFormCollection form) {
 
             if (HttpContext.Session.GetString("nomeUsuario")!=null) {
                 ComentarioModel comentario = new ComentarioModel();
@@ -48,7 +51,7 @@ namespace Projeto.Carfel.Comentarios.Controllers
         }
 
         [HttpGet]
-        public IActionResult Aprovacao() {
+        public IActionResult AprovacaoComentario() {
             if (HttpContext.Session.GetString("emailUsuario") == "admin@carfel.com"){
                 return View();
             }
