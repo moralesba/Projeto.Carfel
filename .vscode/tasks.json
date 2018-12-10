@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/projetos_senai/Senai.Variaveis/Senai.Variaveis.csproj"
+                "${workspaceFolder}/Projeto.Carfel.Comentarios.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

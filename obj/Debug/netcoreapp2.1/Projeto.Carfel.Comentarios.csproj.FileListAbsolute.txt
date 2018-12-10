@@ -48,3 +48,6 @@ C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\
 C:\Users\fabio\OneDrive\Área de Trabalho\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Login.g.cshtml.cs
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Cadastro.g.cshtml.cs
 C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Login.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Comentario.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Deslogado.g.cshtml.cs
+C:\Users\47015374897\Desktop\htm & css\Carfel\Projeto.Carfel.Comentarios\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Logado.g.cshtml.cs

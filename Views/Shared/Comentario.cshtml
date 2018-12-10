@@ -1,0 +1,26 @@
+@using Projeto.Carfel.Comentarios.Models;
+@using Projeto.Carfel.Comentarios.Repositorios;
+
+<link rel="stylesheet" href="iziModal-master/css/iziModal.min.css">
+<link rel="stylesheet" href="css/Comentario.css">
+<link rel="stylesheet" href="css/MasterPage.css">
+<script src="iziModal-master/js/jquery.min.js"></script>
+<script src="iziModal-master/js/iziModal.min.js"></script>
+
+<div class="container6">
+    <div class="box-comentario">
+        <form action="/Comentario/Cadastro" method="POST">
+            <h2>Comentários</h2>
+            <textarea id="areaComentario" name="Comentario" placeholder="Escreva seu comentário aqui"></textarea>
+            <div class="bt-comentario">
+                <button class="bt5" type="submit">
+                    Comentar
+                </button>
+                <button>
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+

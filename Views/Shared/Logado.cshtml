@@ -1,0 +1,47 @@
+@using Microsoft.AspNetCore.Http
+<link rel="stylesheet" href="iziModal-master/css/iziModal.min.css">
+<link rel="stylesheet" href="css/Comentario.css">
+<link rel="stylesheet" href="css/MasterPage.css">
+<script src="iziModal-master/js/jquery.min.js"></script>
+<script src="iziModal-master/js/iziModal.min.js"></script>
+
+<nav class="navbar">
+    <div class="container-menu">
+        <ul class="menu">
+            <a href="home.html" class="logo">
+                <img src="imagens/logo.png" alt="logo">
+            </a>
+            <li>
+                <a href="home.html" class="menu-itens">home</a>
+            </li>
+            <li>
+                <a href="#" class="menu-itens">nosso produto</a>
+            </li>
+            <li>
+                <a href="sobre-nos.html" class="menu-itens">sobre nós</a>
+            </li>
+            <li>
+                <a href="#" class="menu-itens">o que fazemos</a>
+            </li>
+            <li>
+                <a href="#" class="menu-itens">planos</a>
+            </li>
+            <li>
+                <a href="FAQ.html" class="menu-itens">FAQ</a>
+            </li>
+            <li>
+                <a href="contato.html" class="menu-itens">contato</a>
+            </li>
+            <li>
+                @if(@Context.Session.GetString("nomeUsuario") != null){
+                <a href="#" class="menu-itens">
+                    <i class="fas fa-user"></i>
+                    @Context.Session.GetString("nomeUsuario")</a>
+                }
+            </li>
+            <li class="bt-login-ul">
+                <button class="login" data-izimodal-open="#modal-login" data-izimodal-transitionin="fadeInDown">Sair</button>
+            </li>
+        </ul>
+    </div>
+</nav>

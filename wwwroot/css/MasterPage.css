@@ -8,6 +8,7 @@
 #areaComentario {
     height: 30px;
     transition: height .2s;
+    width: 100%;
 }
 #areaComentario:focus {
     height: 100px;
