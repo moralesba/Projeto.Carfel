@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto.Carfel.Comentarios.Models;
@@ -8,16 +9,16 @@ namespace Projeto.Carfel.Comentarios.Controllers
 {
         public class ComentarioController : Controller {
 
-        [HttpGet] 
+        [HttpGet]
         public ActionResult MasterPage (){
             return View ();
         }
-        public IActionResult CadastroComentario() {
+        public IActionResult Cadastro() {
             return RedirectToAction("MasterPage");
         }
 
         [HttpPost]
-        public IActionResult CadastroComentario(IFormCollection form) {
+        public IActionResult Comentar (IFormCollection form) {
 
             if (HttpContext.Session.GetString("nomeUsuario")!=null) {
                 ComentarioModel comentario = new ComentarioModel();
@@ -27,35 +28,29 @@ namespace Projeto.Carfel.Comentarios.Controllers
                     comentario.Texto = form["comentario"];
                 }
                 else {
-                    TempData["AvisoComent"] = "O comentário não pode está vazio!";
-                    return RedirectToAction("MasterPage");
+                    TempData["AvisoComent"] = "O comentario esta vazio";
+                    return Redirect("/");
                 }
                 comentario.UsuarioNome =  HttpContext.Session.GetString("nomeUsuario");
                 comentario.UsuarioEmail = HttpContext.Session.GetString("emailUsuario");
-
                 comentario.DataCriacao = DateTime.Now;
-                
-                if (System.IO.File.Exists("Comentariospaprovacao.csv")) {
-                    //Ler o arquivo e quebrar a cada *
-                    
-                    //-------------------------------------------------------------------------------------------------------------
-                }
 
-                comentarioRepositorio.CadastroPAprovacao(comentario);
-                TempData["AvisoComent"] = "Comentário enviado para aprovação!"; 
-                return RedirectToAction("MasterPage");
+                comentarioRepositorio.ReceberComentarios(comentario);
+                TempData["AvisoComent"] = "Comentario enviado"; 
+                return Redirect("/");
             }
             else {
-                return RedirectToAction("MasterPage");
+                return Redirect("/");
             }
         }
 
         [HttpGet]
-        public IActionResult AprovacaoComentario() {
-            if (HttpContext.Session.GetString("emailUsuario") == "admin@carfel.com"){
-                return View();
-            }
-            return RedirectToAction("MasterPage");
+        public IActionResult Listar() {
+            ComentarioRepositorio comentarios = new ComentarioRepositorio();
+
+            ViewData["Comentarios"] = comentarios.LerArquivoSerializado2();
+
+            return Redirect ("/");
         }
     }
 }

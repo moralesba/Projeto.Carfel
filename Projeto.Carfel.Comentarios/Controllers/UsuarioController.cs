@@ -65,21 +65,17 @@ namespace Projeto.Carfel.Comentarios.Controllers
                         count++;           
                     }
                 }
-
                 if (count == UsuariosSalvos.Length || count==0) {
                     if (!string.IsNullOrEmpty(form["email"])){
                         email = form["email"];
                         if (email.Contains("@") && email.Contains(".") && email.Length>=10) {
                             usuario.Email = form["email"];
                         }
-                    }
-                    else {
+                    } else {
                         TempData["MensagemCadastro"] = "Email inválido";
                         return RedirectToAction("MasterPage");
                     }
-                }
-
-                else {
+                } else {
                     TempData["MensagemCadastro"] = "Email ja cadastrado";
                     return RedirectToAction("MasterPage");
                 }
