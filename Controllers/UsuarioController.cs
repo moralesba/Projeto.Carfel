@@ -9,6 +9,10 @@ namespace Projeto.Carfel.Comentarios.Controllers
         
         [HttpGet]
         public ActionResult MasterPage (){
+            ComentarioRepositorio comentarios = new ComentarioRepositorio();
+
+            ViewData["Comentarios"] = comentarios.LerArquivoSerializado2();
+
             return View ();
         }
         public IActionResult Cadastro () {
@@ -65,21 +69,17 @@ namespace Projeto.Carfel.Comentarios.Controllers
                         count++;           
                     }
                 }
-
                 if (count == UsuariosSalvos.Length || count==0) {
                     if (!string.IsNullOrEmpty(form["email"])){
                         email = form["email"];
                         if (email.Contains("@") && email.Contains(".") && email.Length>=10) {
                             usuario.Email = form["email"];
                         }
-                    }
-                    else {
+                    } else {
                         TempData["MensagemCadastro"] = "Email inválido";
                         return RedirectToAction("MasterPage");
                     }
-                }
-
-                else {
+                } else {
                     TempData["MensagemCadastro"] = "Email ja cadastrado";
                     return RedirectToAction("MasterPage");
                 }
@@ -144,6 +144,12 @@ namespace Projeto.Carfel.Comentarios.Controllers
             }
             TempData["MensagemLogin"]= "Usuário/senha inválido";
             return  RedirectToAction("MasterPage");
+        }
+        [HttpGet]
+        public IActionResult Sair() {
+            HttpContext.Session.Clear();  
+
+            return Redirect("/");
         }
     }
 }

@@ -1,5 +1,6 @@
 @using Projeto.Carfel.Comentarios.Models;
 @using Projeto.Carfel.Comentarios.Repositorios;
+@using Microsoft.AspNetCore.Http;
 
 <link rel="stylesheet" href="iziModal-master/css/iziModal.min.css">
 <link rel="stylesheet" href="css/Comentario.css">
@@ -9,18 +10,49 @@
 
 <div class="container6">
     <div class="box-comentario">
-        <form action="/Comentario/Cadastro" method="POST">
+        <form action="/Comentario/Comentar" method="POST">
             <h2>Comentários</h2>
             <textarea id="areaComentario" name="Comentario" placeholder="Escreva seu comentário aqui"></textarea>
-            <div class="bt-comentario">
-                <button class="bt5" type="submit">
-                    Comentar
-                </button>
-                <button>
-                    Cancelar
-                </button>
+            <div class="bt-section">
+                <div class="bt-comentario">
+                    @if (Context.Session.GetString("nomeUsuario")==null) {
+                    <button class="bt5" onclick="myFunction()">
+                        Comentar
+                    </button>
+
+                    <script>
+                        function myFunction() {
+                            alert("Faça login antes de escrever um comentário.");
+                        }
+                    </script>}
+                    else{
+                    <button class="bt5" type="submit">
+                        Comentar
+                    </button>}
+                    <button type="reset">
+                        Cancelar
+                    </button>
+                </div>
+                <div class="aviso-comentario">
+                    @if (Context.Session.GetString("nomeUsuario")==null) {
+                    <p>Faça o <button data-izimodal-open="#modal-login" data-izimodal-transitionin="fadeInDown">login</button>
+                        antes de escrever um comentário</p>}
+                </div> 
             </div>
         </form>
+        <div class="lista-comentarios">
+            @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>) {
+
+                <div class="itens-comentarios">
+                    <div class="nome-comentarios">
+                        <i class="fas fa-user"></i>
+                        <h3>@item.UsuarioNome</h3>
+                    </div>
+                    <span>@item.DataCriacao</span>
+                </div>
+                <p> @item.Texto </p>
+                }
+        </div>
+
     </div>
 </div>
-

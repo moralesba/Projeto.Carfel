@@ -1,6 +1,7 @@
-@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http;
 @using Projeto.Carfel.Comentarios.Models;
 @using Projeto.Carfel.Comentarios.Repositorios;
+@using Projeto.Carfel.Comentarios.Controllers;
 <!DOCTYPE html>
 <html>
 
@@ -21,9 +22,9 @@
 <body>
     <header>
         @if (@Context.Session.GetString("nomeUsuario") != null){
-             @Html.Partial("Logado")
+        @Html.Partial("Logado")
         } else {
-             @Html.Partial("Deslogado")
+        @Html.Partial("Deslogado")
         }
 
         @Html.Partial("Login")
@@ -31,7 +32,7 @@
 
     </header>
     <main>
-        
+
         <div class="container">
 
             <div class="name">
@@ -171,19 +172,8 @@
             <hr>
         </div>
 
-    @Html.Partial("Comentario")
-     
-    @foreach (var item in ViewData["ComentariosPAP"] as List<ComentarioModel>) {
-            <tr>
-                <td>
-                    @item.UsuarioNome
-                </td>
-                <td>
-                    @item.Texto
-                </td>
-            </tr>
-    }
-     
+        @Html.Partial("Comentario")
+
     </main>
 
     <footer>

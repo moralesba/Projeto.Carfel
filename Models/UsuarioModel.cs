@@ -1,6 +1,7 @@
 using System;
 
 namespace Projeto.Carfel.Comentarios.Models {
+     [Serializable()]
     public class UsuarioModel
     {
         public string Nome { get; set; }

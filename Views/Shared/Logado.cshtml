@@ -39,9 +39,12 @@
                     @Context.Session.GetString("nomeUsuario")</a>
                 }
             </li>
-            <li class="bt-login-ul">
-                <button class="login" data-izimodal-open="#modal-login" data-izimodal-transitionin="fadeInDown">Sair</button>
-            </li>
+            <li>
+            @if (Context.Session.GetString("nomeUsuario")!=null) {
+                <li class="bt-login-ul">
+                    <button class="login"><a href="/Usuario/Sair" class="sair"> Sair </a></button>
+                </li>
+            }</li>
         </ul>
     </div>
 </nav>

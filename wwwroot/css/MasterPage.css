@@ -6,12 +6,13 @@
     letter-spacing: .7px
 }
 #areaComentario {
+    margin-top: 10px;
     height: 30px;
     transition: height .2s;
     width: 100%;
 }
-#areaComentario:focus {
-    height: 100px;
+textarea:focus { 
+    outline: none !important;
 }
 .menu{
     position: fixed;
@@ -487,6 +488,59 @@ footer {
 .bt5 {
     font-weight: 600
 }
+.lista-comentarios{
+    grid-column: 2;
+    font-size: 1vw;
+    margin-top: 3vw
+}
+.lista-comentarios span{
+    font-size: .7vw
+}
+.lista-comentarios p{
+    margin: 3px 0 2vw 17px;
+    color: #686868;
+    font-size: .8em;
+}
+.itens-comentarios{
+    display: flex;
+    justify-content: space-between;
+    font-size: .8em;
+    color: #474747
+}
+.nome-comentarios {
+    display: flex;
+    align-items: center;
+}
+.nome-comentarios i{
+    margin-top: 2px;
+    font-size: .7vw;
+}
+.sair button{
+    color: aqua
+}
+.bt-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse
+}
+.aviso-comentario {
+    color: red
+}
+.aviso-comentario p{
+    font-size: .65vw
+}
+.aviso-comentario button{
+    border: none;
+    background: white;
+    font-weight: 600;
+    font-size: .65vw;
+    color: red;
+}
+.login a{
+text-decoration: none;
+color:rgb(0, 188, 220);
+font-weight: 700
+}
 @media screen and (max-width:1200px){
 
 .bola-amarela{
@@ -518,5 +572,3 @@ footer {
     margin-top: 10vh
 }
 }
-
-
